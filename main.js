@@ -15,23 +15,49 @@ document.querySelectorAll('a').forEach((a) => {
     // remove the preview when the mouse leaves the link
     document.getElementById('preview').innerHTML = '';
   });
-  function filterTable() {
-    var input, filter, table, tr, td, i, txtValue;
-    input = document.getElementById("filterInput");
-    filter = input.value.toUpperCase();
-    table = document.getElementById("skillsTable");
-    tr = table.getElementsByTagName("tr");
-    for (i = 0; i < tr.length; i++) {
-      td = tr[i].getElementsByTagName("td")[1];  //Changed index from 0 to 1
-      if (td) {
-        txtValue = td.textContent || td.innerText;
-        if (txtValue.toUpperCase().indexOf(filter) > -1) {
-          tr[i].style.display = "";
-        } else {
-          tr[i].style.display = "none";
-        }
-      }       
-    }
-  }
   
+});
+
+// THIS PART OF THE CODE PRE-RENDERS images
+
+window.addEventListener('load', function() {
+  // Find all of the links
+  const links = document.querySelectorAll('a');
+
+  links.forEach((a) => {
+    // Get the URL of the image for this link
+    const imageUrl = a.getAttribute('data-preview');
+
+    // If this link has an associated image...
+    if(imageUrl) {
+      // ... create a new image element
+      const img = document.createElement('img');
+
+      // Set the source of the image element to the URL
+      img.src = imageUrl;
+
+      // Hide the image
+      img.style.display = 'none';
+
+      // Append the image element to the body
+      // (this will start loading the image in the background)
+      document.body.appendChild(img);
+
+      // When the link is hovered over...
+      a.addEventListener('mouseover', function(e) {
+        // ... replace the image in the preview element with the preloaded image
+        document.getElementById('preview').innerHTML = '';
+        document.getElementById('preview').appendChild(img);
+
+        // Show the preview box
+        document.getElementById('preview').style.display = 'block';
+      });
+
+      // When the mouse leaves the link...
+      a.addEventListener('mouseout', function(e) {
+        // ... hide the preview box
+        document.getElementById('preview').style.display = 'none';
+      });
+    }
+  });
 });
