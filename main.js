@@ -1,12 +1,15 @@
-const links = document.querySelectorAll('a');
-links.forEach((link) => {
-    link.addEventListener('mouseover', (event) => {
-        const targetURL = event.target.href;
-        const previewDiv = document.getElementById('preview');
-        previewDiv.innerHTML = `<iframe src="${targetURL}" sandbox="allow-same-origin" style="width: 100%; height: 100%; border: none;"></iframe>`;
+document.querySelectorAll('a').forEach((a) => {
+    a.addEventListener('mouseover', function(e) {
+      // load the corresponding image into the preview element
+      document.getElementById('preview').innerHTML = `<img src="GitHub-Logo.png" alt="GitHub Logo">`;
+      // show the preview box
+      document.getElementById('preview').style.display = 'block';
     });
-    link.addEventListener('mouseout', (event) => {
-        const previewDiv = document.getElementById('preview');
-        previewDiv.innerHTML = '';
+  
+    a.addEventListener('mouseout', function(e) {
+      // hide the preview box
+      document.getElementById('preview').style.display = 'none';
+      // remove the preview when the mouse leaves the link
+      document.getElementById('preview').innerHTML = '';
     });
-});
+  });  
