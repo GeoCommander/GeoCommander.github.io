@@ -1,0 +1,9 @@
+#preview {
+    position: fixed;
+    right: 0;
+    width: 30%;
+    height: 100%;
+    overflow: auto; /* Enables scroll if the content height is more than the preview height */
+    border-left: 1px solid #ddd;
+    padding: 10px;
+}
