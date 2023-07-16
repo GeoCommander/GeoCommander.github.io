@@ -2,181 +2,182 @@
 <!-- THIS PART OF THE CODE PRE-RENDERS images// Load all images at the start -->
 
 <div style="display: none;">
-  <img src="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/1.%20Databases%20and%20Data%20Warehouses/mysql.png" alt="MySQL">
-  <img src="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/2.%20Relational%20Database%20Management/t-sql.png" alt="T-SQL">
-  <img src="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/3.%20Data%20Visualization%09/micorost_power_bi.png" alt="Microsoft Power BI">
-  <img src="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/4.%20Programming%20Language%09/python.png" alt="Python">
-  <img src="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/4.%20Programming%20Language%09/polars.png" alt="Polars">
-  <img src="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/5.%20Version%20Control%09/git.png" alt="Github">
-  <img src="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/6.%20Operating%20System%20(OS)%09/linux_fedora_ubuntu.png" alt="Linux">
-  <img src="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/6.%20Operating%20System%20(OS)%09/linux_fedora_ubuntu.png" alt="Bash Shell Scripting">
-  <img src="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/8.%20Workflow%20Orchestration%09/airflow.png" alt="Airflow">
-  <img src="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/8.%20Workflow%20Orchestration%09/ssis.png" alt="SSIS">
-  <!-- Add the rest of your images here... -->
-</div>
-
-<!-- This is main part of the code: -->
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Certifications</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-    }
-    .filter-container {
-      margin: 20px 0;
-    }
-    .table-container {
-      width: 50%;
-    }
-    table {
-      table-layout: fixed;
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 2em;
-    }
-    th, td {
-      border: 1px solid #ccc;
-      padding: 10px;
-      vertical-align: top;
-      white-space: nowrap;
-    }
-    th {
-      font-weight: bold;
-      background-color: #007BFF;
-      color: #ffffff;
-    }
-    tr:nth-child(even) {background-color: #f2f2f2;}
-    tr:hover {
-      background-color: #ddd;
-    }
-    a {
-      display: inline-block;
-      text-align: center;
-    }
-    #preview {
-      position: fixed;
-      right: 10px;
-      top: 10px;
-      display: none;
-      border: 1px solid #ccc;
-      padding: 10px;
-      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
-      background-color: white;
-      max-width: 750px;
-      max-height: 750px;
-      overflow: auto;
-    }
-    #preview img {
-      width: 100%;
-      height: auto;
-    }
-  </style>
-</head>
-<body>
-  <h1> Hover over the link for a surprise! 😏</h1>
-
-  <div class="filter-container">
-    <input type="text" id="filterInput" onkeyup="filterTable()" placeholder="Search for skill categories..">
+    <img src="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/1.%20Databases%20and%20Data%20Warehouses/mysql.png" alt="MySQL">
+    <img src="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/2.%20Relational%20Database%20Management/t-sql.png" alt="T-SQL">
+    <img src="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/3.%20Data%20Visualization%09/micorost_power_bi.png" alt="Microsoft Power BI">
+    <img src="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/4.%20Programming%20Language%09/python.png" alt="Python">
+    <img src="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/4.%20Programming%20Language%09/polars.png" alt="Polars">
+    <img src="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/5.%20Version%20Control%09/git.png" alt="Github">
+    <img src="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/6.%20Operating%20System%20(OS)%09/linux_fedora_ubuntu.png" alt="Linux">
+    <img src="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/6.%20Operating%20System%20(OS)%09/linux_fedora_ubuntu.png" alt="Bash Shell Scripting">
+    <img src="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/8.%20Workflow%20Orchestration%09/airflow.png" alt="Airflow">
+    <img src="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/8.%20Workflow%20Orchestration%09/ssis.png" alt="SSIS">
+    <!-- Add the rest of your images here... -->
   </div>
-
-  <div class="table-container">
-    <table id="skillsTable">
-      <thead>
-        <tr>
-          <th>Skill Category</th>
-          <th>Skills</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Databases and Data Warehouses</td>
-          <td>Microsoft SQL Server, Oracle Database, <a href="https://www.coursera.org/account/accomplishments/verify/6U7ZZH5YVUQP" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/1.%20Databases%20and%20Data%20Warehouses/mysql.png">MySQL</a>, Redshift</td>
-        </tr>
-        <tr>
-          <td>Relational Database Management</td>
-          <td><a href="#" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/2.%20Relational%20Database%20Management/t-sql.png">T-SQL</a>, PL/SQL</td>
-        </tr>
-        <tr>
-          <td>Data Visualization</td>
-          <td><a href="#" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/3.%20Data%20Visualization%09/micorost_power_bi.png">Microsoft Power BI</a>, IBM Cognos Analytics</td>
-        </tr>
-        <!-- Continue for remaining rows -->
-        <tr>
-          <td>Programming Language</td>
-          <td><a href="#" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/4.%20Programming%20Language%09/python.png">Python</a> (Pandas, <a href="#" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/4.%20Programming%20Language%09/polars.png">Polars</a>, Selenium, PytoExe)</td>
-        </tr>
-        <tr>
-          <td>Version Control</td>
-          <td><a href="#" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/5.%20Version%20Control%09/git.png">Github</a>, Git</a></td>
-        </tr>
-        <tr>
-          <td>Operating System (OS)</td>
-          <td><a href="#" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/6.%20Operating%20System%20(OS)%09/linux_fedora_ubuntu.png">Linux (Fedora, Ubuntu)</a>, Windows</td>
-        </tr>
-        <tr>
-          <td>Scripting and Terminal Usage</td>
-          <td><a href="#" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/6.%20Operating%20System%20(OS)%09/linux_fedora_ubuntu.png">Bash Shell Scripting</a></td>
-        </tr>
-        <tr>
-          <td>Workflow Orchestration</td>
-          <td><a href="#" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/8.%20Workflow%20Orchestration%09/airflow.png">Airflow</a>, <a href="#" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/8.%20Workflow%20Orchestration%09/ssis.png">SSIS</a>, AWS Glue, Azure Data Factory </td>
-        </tr>
-        <tr>
-          <td>Cloud Services</td>
-          <td>AWS (S3, IAM, EC2, RDS), Azure</td>
-        </tr>
-      </tbody>
-    </table>
-  </div>
-
-  <div id="preview"></div>
-
-  <script>
-    document.querySelectorAll('a').forEach((a) => {
-      a.addEventListener('mouseover', function(e) {
-        const imageUrl = this.getAttribute('data-preview');
-        if(imageUrl) {
-          // load the corresponding image into the preview element
-          document.getElementById('preview').innerHTML = `<img src="${imageUrl}" alt="Preview">`;
-          // show the preview box
-          document.getElementById('preview').style.display = 'block';
-        }
-      });
-
-      a.addEventListener('mouseout', function(e) {
-        // hide the preview box
-        document.getElementById('preview').style.display = 'none';
-        // remove the preview when the mouse leaves the link
-        document.getElementById('preview').innerHTML = '';
-      });
-    });
-
-    function filterTable() {
-  var input, filter, table, tr, td, i, txtValue;
-  input = document.getElementById("filterInput");
-  filter = input.value.toUpperCase();
-  table = document.getElementById("skillsTable");
-  tr = table.getElementsByTagName("tr");
-  for (i = 0; i < tr.length; i++) {
-    td = tr[i].getElementsByTagName("td");
-    if (td[0] && td[1]) {
-      txtValue1 = td[0].textContent || td[0].innerText;
-      txtValue2 = td[1].textContent || td[1].innerText;
-      if (txtValue1.toUpperCase().indexOf(filter) > -1 || txtValue2.toUpperCase().indexOf(filter) > -1) {
-        tr[i].style.display = "";
-      } else {
-        tr[i].style.display = "none";
+  
+  <!-- This is main part of the code: -->
+  
+  <!DOCTYPE html>
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Certifications</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
       }
-    }       
+      .filter-container {
+        margin: 20px 0;
+      }
+      .table-container {
+        width: 50%;
+      }
+      table {
+        table-layout: fixed;
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 2em;
+      }
+      th, td {
+        border: 1px solid #ccc;
+        padding: 10px;
+        vertical-align: top;
+        white-space: nowrap;
+      }
+      th {
+        font-weight: bold;
+        background-color: #007BFF;
+        color: #ffffff;
+      }
+      tr:nth-child(even) {background-color: #f2f2f2;}
+      tr:hover {
+        background-color: #ddd;
+      }
+      a {
+        display: inline-block;
+        text-align: center;
+      }
+      #preview {
+        position: fixed;
+        right: 10px;
+        top: 10px;
+        display: none;
+        border: 1px solid #ccc;
+        padding: 10px;
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        background-color: white;
+        max-width: 750px;
+        max-height: 750px;
+        overflow: auto;
+      }
+      #preview img {
+        width: 100%;
+        height: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <h1> Hover over the link for a surprise!  💬</h1>
+  
+    <div class="filter-container">
+      <input type="text" id="filterInput" onkeyup="filterTable()" placeholder="Search for skill categories..">
+    </div>
+  
+    <div class="table-container">
+      <table id="skillsTable">
+        <thead>
+          <tr>
+            <th>Skill Category</th>
+            <th>Skills</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Databases and Data Warehouses</td>
+            <td>Microsoft SQL Server, Oracle Database, <a href="https://www.coursera.org/account/accomplishments/verify/6U7ZZH5YVUQP" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/1.%20Databases%20and%20Data%20Warehouses/mysql.png">MySQL</a>, Redshift</td>
+          </tr>
+          <tr>
+            <td>Relational Database Management</td>
+            <td><a href="#" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/2.%20Relational%20Database%20Management/t-sql.png">T-SQL</a>, PL/SQL</td>
+          </tr>
+          <tr>
+            <td>Data Visualization</td>
+            <td><a href="#" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/3.%20Data%20Visualization%09/micorost_power_bi.png">Microsoft Power BI</a>, IBM Cognos Analytics</td>
+          </tr>
+          <!-- Continue for remaining rows -->
+          <tr>
+            <td>Programming Language</td>
+            <td><a href="#" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/4.%20Programming%20Language%09/python.png">Python</a> (Pandas, <a href="#" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/4.%20Programming%20Language%09/polars.png">Polars</a>, Selenium, PytoExe)</td>
+          </tr>
+          <tr>
+            <td>Version Control</td>
+            <td><a href="#" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/5.%20Version%20Control%09/git.png">Github</a>, Git</a></td>
+          </tr>
+          <tr>
+            <td>Operating System (OS)</td>
+            <td><a href="#" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/6.%20Operating%20System%20(OS)%09/linux_fedora_ubuntu.png">Linux (Fedora, Ubuntu)</a>, Windows</td>
+          </tr>
+          <tr>
+            <td>Scripting and Terminal Usage</td>
+            <td><a href="#" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/6.%20Operating%20System%20(OS)%09/linux_fedora_ubuntu.png">Bash Shell Scripting</a></td>
+          </tr>
+          <tr>
+            <td>Workflow Orchestration</td>
+            <td><a href="#" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/8.%20Workflow%20Orchestration%09/airflow.png">Airflow</a>, <a href="#" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/pictures/8.%20Workflow%20Orchestration%09/ssis.png">SSIS</a>, AWS Glue, Azure Data Factory </td>
+          </tr>
+          <tr>
+            <td>Cloud Services</td>
+            <td>AWS (S3, IAM, EC2, RDS), Azure</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  
+    <div id="preview"></div>
+  
+    <script>
+      document.querySelectorAll('a').forEach((a) => {
+        a.addEventListener('mouseover', function(e) {
+          const imageUrl = this.getAttribute('data-preview');
+          if(imageUrl) {
+            // load the corresponding image into the preview element
+            document.getElementById('preview').innerHTML = `<img src="${imageUrl}" alt="Preview">`;
+            // show the preview box
+            document.getElementById('preview').style.display = 'block';
+          }
+        });
+  
+        a.addEventListener('mouseout', function(e) {
+          // hide the preview box
+          document.getElementById('preview').style.display = 'none';
+          // remove the preview when the mouse leaves the link
+          document.getElementById('preview').innerHTML = '';
+        });
+      });
+  
+      function filterTable() {
+    var input, filter, table, tr, td, i, txtValue;
+    input = document.getElementById("filterInput");
+    filter = input.value.toUpperCase();
+    table = document.getElementById("skillsTable");
+    tr = table.getElementsByTagName("tr");
+    for (i = 0; i < tr.length; i++) {
+      td = tr[i].getElementsByTagName("td");
+      if (td[0] && td[1]) {
+        txtValue1 = td[0].textContent || td[0].innerText;
+        txtValue2 = td[1].textContent || td[1].innerText;
+        if (txtValue1.toUpperCase().indexOf(filter) > -1 || txtValue2.toUpperCase().indexOf(filter) > -1) {
+          tr[i].style.display = "";
+        } else {
+          tr[i].style.display = "none";
+        }
+      }       
+    }
   }
-}
-
-
-  </script>
-</body>
-</html>
+  
+  
+    </script>
+  </body>
+  </html>
+  
