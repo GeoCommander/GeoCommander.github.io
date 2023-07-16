@@ -1,9 +1,12 @@
 document.querySelectorAll('a').forEach((a) => {
     a.addEventListener('mouseover', function(e) {
-      // load the corresponding image into the preview element
-      document.getElementById('preview').innerHTML = `<img src="GitHub-Logo.png" alt="GitHub Logo">`;
-      // show the preview box
-      document.getElementById('preview').style.display = 'block';
+      const imageUrl = this.getAttribute('data-preview');
+      if(imageUrl) {
+        // load the corresponding image into the preview element
+        document.getElementById('preview').innerHTML = `<img src="${imageUrl}" alt="Preview">`;
+        // show the preview box
+        document.getElementById('preview').style.display = 'block';
+      }
     });
   
     a.addEventListener('mouseout', function(e) {
