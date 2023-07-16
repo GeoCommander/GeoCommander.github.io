@@ -17,5 +17,3 @@ document.querySelectorAll('a').forEach((a) => {
   });
   
 });
-
-// THIS PART OF THE CODE PRE-RENDERS images// Load all images at the start
