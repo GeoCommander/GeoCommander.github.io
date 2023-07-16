@@ -4,12 +4,69 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>My Certifications</title>
-  <link rel="stylesheet" href="styles.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+    }
+    .filter-container {
+      margin: 20px 0;
+    }
+    .table-container {
+      width: 50%;
+    }
+    table {
+      table-layout: fixed;
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 2em;
+    }
+    th, td {
+      border: 1px solid #ccc;
+      padding: 10px;
+      vertical-align: top;
+      white-space: nowrap;
+    }
+    th {
+      font-weight: bold;
+      background-color: #007BFF;
+      color: #ffffff;
+    }
+    tr:nth-child(even) {background-color: #f2f2f2;}
+    tr:hover {
+      background-color: #ddd;
+    }
+    a {
+      display: inline-block;
+      text-align: center;
+    }
+    #preview {
+      position: fixed;
+      right: 10px;
+      top: 10px;
+      display: none;
+      border: 1px solid #ccc;
+      padding: 10px;
+      box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+      background-color: white;
+      max-width: 750px;
+      max-height: 750px;
+      overflow: auto;
+    }
+    #preview img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
 </head>
 <body>
   <h2>SKILLS</h2>
+
+  <div class="filter-container">
+    <input type="text" id="filterInput" onkeyup="filterTable()" placeholder="Search for skill categories..">
+  </div>
+
   <div class="table-container">
-    <table>
+    <table id="skillsTable">
       <thead>
         <tr>
           <th>Skill Category</th>
@@ -18,41 +75,16 @@
       </thead>
       <tbody>
         <tr>
-          <tr>
-            <td>Databases and Data Warehouses</td>
-            <td>Microsoft SQL Server, Oracle Database, <a href="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png">MySQL</a>, Redshift</td>
-          </tr>          
+          <td>Databases and Data Warehouses</td>
+          <td>Microsoft SQL Server, Oracle Database, <a href="#" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png">MySQL</a>, Redshift</td>
+        </tr>
         <tr>
           <td>Relational Database Management</td>
-          <td><a href="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png">T-SQL</a>, <a href="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png">PL/SQL</a></td>
+          <td><a href="#" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png">T-SQL</a>, <a href="#" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png">PL/SQL</a></td>
         </tr>
         <tr>
           <td>Data Visualization</td>
-          <td><a href="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png">Microsoft Power BI</a>, <a href="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png">IBM Cognos Analytics</a></td>
-        </tr>
-        <tr>
-          <td>Data Visualization</td>
-          <td><a href="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png">Microsoft Power BI</a>, <a href="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png">IBM Cognos Analytics</a></td>
-        </tr>
-        <tr>
-          <td>Data Visualization</td>
-          <td><a href="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png">Microsoft Power BI</a>, <a href="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png">IBM Cognos Analytics</a></td>
-        </tr>
-        <tr>
-          <td>Data Visualization</td>
-          <td><a href="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png">Microsoft Power BI</a>, <a href="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png">IBM Cognos Analytics</a></td>
-        </tr>
-        <tr>
-          <td>Data Visualization</td>
-          <td><a href="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png">Microsoft Power BI</a>, <a href="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png">IBM Cognos Analytics</a></td>
-        </tr>
-        <tr>
-          <td>Data Visualization</td>
-          <td><a href="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png">Microsoft Power BI</a>, <a href="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png">IBM Cognos Analytics</a></td>
-        </tr>
-        <tr>
-          <td>Data Visualization</td>
-          <td><a href="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png">Microsoft Power BI</a>, <a href="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png">IBM Cognos Analytics</a></td>
+          <td><a href="#" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png">Microsoft Power BI</a>, <a href="#" data-preview="https://raw.githubusercontent.com/GeoCommander/GeoCommander.github.io/progress/Coursera%20GTTTHXDC8MBU.png">IBM Cognos Analytics</a></td>
         </tr>
         <!-- Continue for remaining rows -->
       </tbody>
@@ -61,6 +93,47 @@
 
   <div id="preview"></div>
 
-  <script src="main.js"></script>
+  <script>
+    document.querySelectorAll('a').forEach((a) => {
+      a.addEventListener('mouseover', function(e) {
+        const imageUrl = this.getAttribute('data-preview');
+        if(imageUrl) {
+          // load the corresponding image into the preview element
+          document.getElementById('preview').innerHTML = `<img src="${imageUrl}" alt="Preview">`;
+          // show the preview box
+          document.getElementById('preview').style.display = 'block';
+        }
+      });
+
+      a.addEventListener('mouseout', function(e) {
+        // hide the preview box
+        document.getElementById('preview').style.display = 'none';
+        // remove the preview when the mouse leaves the link
+        document.getElementById('preview').innerHTML = '';
+      });
+    });
+
+    function filterTable() {
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("filterInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("skillsTable");
+  tr = table.getElementsByTagName("tr");
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td");
+    if (td[0] && td[1]) {
+      txtValue1 = td[0].textContent || td[0].innerText;
+      txtValue2 = td[1].textContent || td[1].innerText;
+      if (txtValue1.toUpperCase().indexOf(filter) > -1 || txtValue2.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }       
+  }
+}
+
+
+  </script>
 </body>
 </html>
