@@ -7,28 +7,38 @@
   padding: 10px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
   background-color: white;
-  max-width: 300px;
-  max-height: 300px;
+  max-width: 750px;  /* 2.5x the original size */
+  max-height: 750px;  /* 2.5x the original size */
   overflow: auto;
 }
 
 #preview img {
-  max-width: 100%;
+  width: 100%;  /* change this from max-width to width */
   height: auto;
 }
 
-table {
-  width: 100%;
-  border-collapse: collapse;
+
+.table-container {
+  width: 50%;
 }
 
-th, td {
-  padding: 15px;
-  border-bottom: 1px solid #ddd;
+table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  vertical-align: top;
+  white-space: nowrap;  /* added this */
+}
+
+a {
+  display: inline-block;
+  text-align: center;
 }
 
 th {
-  background-color: #f2f2f2;
+  font-weight: bold;
 }
-
-tr:hover {background-color: #f5f5f5;}
